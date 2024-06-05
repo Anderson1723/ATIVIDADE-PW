@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pintura Express</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .info {
+            margin-bottom: 40px;
+        }
+
+        .color-test {
+            text-align: center;
+        }
+
+        .color-box {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #3498db;
+            border: 2px solid #2c3e50;
+            transition: background-color 0.5s;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1c5986;
+        }
+
+        .contact, .services {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact a, .services a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .whatsapp {
+            background-color: #25D366;
+        }
+
+        .instagram {
+            background-color: #E1306C;
+        }
+
+        .email {
+            background-color: #3498db;
+        }
+
+        .services a {
+            background-color: #2980b9;
+        }
+
+        .services a:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pintura Express</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Sobre</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <div class="container">
+        <div id="about" class="info">
+            <h2>Sobre Nós</h2>
+            <p>Bem-vindo à nossa empresa! Nós nos dedicamos a fornecer os melhores serviços aos nossos clientes. Nossa equipe é altamente qualificada e pronta para atender todas as suas necessidades.</p>
+        </div>
+
+        <div id="services" class="services">
+            <h2>Nossos Serviços</h2>
+            <a href="#service1">Pintura Residencial</a>
+            <a href="#service2">Pintura Comercial</a>
+            <a href="#service3">Pintura Industrial</a>
+            <a href="#service4">Consultoria de Cores</a>
+        </div>
+
+        <div id="color-test" class="color-test">
+            <h2>Teste Nossas Cores</h2>
+            <div id="color-display" class="color-box"></div>
+            <div class="button-container">
+                <button onclick="changeColor('#3498db')">Azul</button>
+                <button onclick="changeColor('#e74c3c')">Vermelho</button>
+                <button onclick="changeColor('#2ecc71')">Verde</button>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <h2>Contato</h2>
+            <a href="https://web.whatsapp.com/" class="whatsapp">WhatsApp</a>
+            <a href="https://www.instagram.com/andersonn_damacena/" class="instagram">Instagram</a>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent" class="email">Email</a>
+        </div>
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById('color-display').style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>
