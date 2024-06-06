@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria de Cores</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+.project img {
+    width: 35%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 15px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consultoria de Cores</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Somos especialistas em consultoria de cores, ajudando você a encontrar a paleta perfeita para sua casa ou empresa. Nossa equipe é composta por profissionais experientes e apaixonados por design.</p>
+    </section>
+    <section id="services">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Consultoria de Cores para Interiores</li>
+            <li>Consultoria de Cores para Exteriores</li>
+            <li>Planejamento de Paletas de Cores</li>
+            <li>Workshops e Treinamentos</li>
+        </ul>
+    </section>
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="project">
+            <img src="Givanildo Lucas.jpeg" alt="Projeto 1">
+            <p>Projeto 1 - Residência Moderna</p>
+        </div>
+        <div class="project">
+            <img src="38 Home Office Spaces Exploring the Bold Blend of Japandi and Brazilian Modernismo (Concept Interiors).jpeg" alt="Projeto 2">
+            <p>Projeto 2 - Escritório Contemporâneo</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="confirmationMessage" style="display:none;">Obrigado por entrar em contato!</p>
+    </section>
+   <script>document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    document.getElementById('confirmationMessage').style.display = 'block';
+});
+</script>
+<p>&copy; 2024 Pintura Express. Todos os direitos reservados.</p>
+</body>
+</html>
