@@ -7,78 +7,118 @@
     <style>
         body {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-section {
-    padding: 20px;
-    margin: 20px 0;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
+        section {
+            padding: 20px;
+            margin: 20px 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-.project {
-    margin: 20px 0;
-}
+        .project {
+            margin: 20px 0;
+            text-align: center;
+        }
 
-.project img {
-    width: 35%;
-    height: auto;
-    border-radius: 5px;
-}
+        .project img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 5px;
+        }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-form button {
-    padding: 10px 15px;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        form button {
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-form button:hover {
-    background: #555;
-}
+        form button:hover {
+            background: #555;
+        }
 
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            section {
+                margin: 20px 10px;
+            }
+
+            .project img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 20px 10px;
+            }
+
+            section {
+                padding: 10px;
+                margin: 10px 5px;
+            }
+
+            form label {
+                margin: 5px 0 2px;
+            }
+
+            form input, form textarea {
+                padding: 8px;
+            }
+
+            form button {
+                padding: 8px 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -95,7 +135,7 @@ form button:hover {
     </header>
     <section id="about">
         <h2>Sobre Nós</h2>
-        <p> Nos da INK EXPRESS Somos especializados em pintura comercial, oferecendo soluções personalizadas para empresas de todos os tamanhos. Nossa equipe é treinada para entregar qualidade e eficiência em cada projeto.</p>
+        <p>Nos da INK EXPRESS somos especializados em pintura comercial, oferecendo soluções personalizadas para empresas de todos os tamanhos. Nossa equipe é treinada para entregar qualidade e eficiência em cada projeto.</p>
     </section>
     <section id="services">
         <h2>Nossos Serviços</h2>
@@ -130,10 +170,11 @@ form button:hover {
         </form>
         <p id="confirmationMessage" style="display:none;">Obrigado por entrar em contato!</p>
     </section>
-      <script>document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        document.getElementById('confirmationMessage').style.display = 'block';
-    });
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmationMessage').style.display = 'block';
+        });
     </script>
     <p align="center">&copy; 2024 Pintura Express. Todos os direitos reservados.</p>
 </body>

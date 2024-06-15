@@ -50,9 +50,10 @@
         }
 
         .color-box {
-            width: 200px;
-            height: 200px;
-            margin: 20px auto;
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            margin: 40px auto;
             background-color: #3498db;
             border: 2px solid #2c3e50;
             transition: background-color 0.5s;
@@ -60,6 +61,7 @@
 
         .button-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
         }
@@ -86,7 +88,7 @@
 
         .contact a, .services a {
             display: inline-block;
-            margin: 0 10px;
+            margin: 10px 5px;
             padding: 10px 20px;
             font-size: 16px;
             text-decoration: none;
@@ -113,7 +115,49 @@
         .services a:hover {
             opacity: 0.8;
         }
-     
+
+        @media (max-width: 768px) {
+            nav a {
+                float: none;
+                display: block;
+                text-align: left;
+                padding: 14px;
+            }
+
+            .color-box {
+                height: 300px;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .contact a, .services a {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+
+            .color-box {
+                height: 200px;
+            }
+
+            button {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .contact a, .services a {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -125,13 +169,13 @@
         <a href="#home">Home</a>
         <a href="#about">Sobre</a>
         <a href="#services">Serviços</a>
-        <a href="#contact">Contato</a>
+        <a href="#contact">Contatos</a>
     </nav>
 
     <div class="container">
         <div id="about" class="info">
             <h2>Sobre Nós</h2>
-            <p>Bem-vindo à INK EXPRESS! Nós nos dedicamos a fornecer os melhores serviços aos nossos clientes. Nossa equipe é altamente qualificada e pronta para atender todas as suas necessidades. Nossos fundadores se dedicam a sempre entregar um Serviço de qualidade que agrada o cliente e entregar a ele uma pintura original e feita com carinho</p>
+            <p>Bem-vindo à INK EXPRESS! Nós nos dedicamos a fornecer os melhores serviços aos nossos clientes. Nossa equipe é altamente qualificada e pronta para atender todas as suas necessidades. Nossos fundadores se dedicam a sempre entregar um serviço de qualidade que agrada o cliente e entregar a ele uma pintura original e feita com carinho.</p>
         </div>
 
         <div id="services" class="services">
@@ -156,7 +200,7 @@
             </div>
         </div>
         <div id="contact" class="contact">
-            <h2>Contato</h2>
+            <h2>Contatos</h2>
             <a href="https://wa.me/5588998404181" class="whatsapp">WhatsApp</a>
             <a href="https://www.instagram.com/andersonn_damacena/" class="instagram">Instagram</a>
             <a href="mailto:andersonluiz9828@gmail.com" class="email">Email</a>
@@ -169,6 +213,6 @@
             document.getElementById('color-display').style.backgroundColor = color;
         }
     </script>
-     <p align="center">&copy; 2024 Pintura Express. Todos os direitos reservados.</p>
+    <p align="center">&copy; 2024 Pintura Express. Todos os direitos reservados.</p>
 </body>
 </html>
